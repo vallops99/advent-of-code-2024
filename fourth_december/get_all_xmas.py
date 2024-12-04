@@ -40,6 +40,49 @@ def get_all_xmas(rows: list[str]) -> int:
     return xmas_counter
 
 
+def is_MAS(rows: list[str], idx: int, subidx: int) -> bool:
+    return (
+        rows[idx][subidx] == "A"
+        and len(rows) - 1 > idx > 0
+        and len(rows[idx]) - 1 > subidx > 0
+        and (
+            (
+                rows[idx - 1][subidx - 1] == "M"
+                and rows[idx - 1][subidx + 1] == "M"
+                and rows[idx + 1][subidx + 1] == "S"
+                and rows[idx + 1][subidx - 1] == "S"
+            )
+            or (
+                rows[idx - 1][subidx - 1] == "S"
+                and rows[idx - 1][subidx + 1] == "S"
+                and rows[idx + 1][subidx + 1] == "M"
+                and rows[idx + 1][subidx - 1] == "M"
+            )
+            or (
+                rows[idx - 1][subidx - 1] == "M"
+                and rows[idx - 1][subidx + 1] == "S"
+                and rows[idx + 1][subidx + 1] == "S"
+                and rows[idx + 1][subidx - 1] == "M"
+            )
+            or (
+                rows[idx - 1][subidx - 1] == "S"
+                and rows[idx - 1][subidx + 1] == "M"
+                and rows[idx + 1][subidx + 1] == "M"
+                and rows[idx + 1][subidx - 1] == "S"
+            )
+        )
+    )
+
+
+def get_all_mas_x_shaped(rows: list[str]) -> int:
+    mas_x_shaped_counter = 0
+    for idx, row in enumerate(rows):
+        for subidx in range(0, len(row)):
+            mas_x_shaped_counter += is_MAS(rows, idx, subidx)
+
+    return mas_x_shaped_counter
+
+
 if __name__ == "__main__":
-    # print(get_data())
     print("All XMAS are: ", get_all_xmas(get_data()))
+    print("All MAS X shape: ", get_all_mas_x_shaped(get_data()))
