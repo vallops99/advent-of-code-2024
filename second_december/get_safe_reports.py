@@ -1,5 +1,5 @@
 from typing import Iterator
-from two_december.utils.utils import read_data
+from second_december.utils.utils import read_data
 
 
 DIRECTION_CHECKS = {

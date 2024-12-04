@@ -1,5 +1,5 @@
 import re
-from four_december.utils.utils import get_data
+from fourth_december.utils.utils import get_data
 
 
 def get_all_xmas(rows: list[str]) -> int:

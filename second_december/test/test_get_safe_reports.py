@@ -1,6 +1,6 @@
 import unittest
-from two_december.brute_force import brute_force_method
-from two_december.get_safe_reports import get_safe_reports, get_almost_safe_reports
+from second_december.brute_force import brute_force_method
+from second_december.get_safe_reports import get_safe_reports, get_almost_safe_reports
 
 
 class TestGetSafeReports(unittest.TestCase):

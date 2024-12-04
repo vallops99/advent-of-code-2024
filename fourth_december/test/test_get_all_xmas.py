@@ -1,5 +1,5 @@
 import unittest
-from four_december.get_all_xmas import get_all_xmas
+from fourth_december.get_all_xmas import get_all_xmas
 
 
 class TestGetAllXmas(unittest.TestCase):

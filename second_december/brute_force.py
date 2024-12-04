@@ -1,5 +1,5 @@
-from two_december.utils.utils import read_data
-from two_december.get_safe_reports import is_levels_distance_safe
+from second_december.utils.utils import read_data
+from second_december.get_safe_reports import is_levels_distance_safe
 
 
 def is_row_safe(report: list[int], direction: str) -> bool:

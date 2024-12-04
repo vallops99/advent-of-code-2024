@@ -1,5 +1,5 @@
 import re
-from three_december.utils.utils import read_data
+from third_december.utils.utils import read_data
 
 
 def find_all_matches(data: str, with_action: bool) -> list[str]:
