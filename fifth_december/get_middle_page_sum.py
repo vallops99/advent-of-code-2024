@@ -23,14 +23,9 @@ def get_middle_fixed_page_sum(
                 None,
             )
             if index:
-                print("index of next item: ", index)
                 fixed_indexes[-1].insert(index, rows[idx][subidx])
-                print("post insert: ", fixed_indexes[-1])
-                print("-------")
             else:
                 fixed_indexes[-1].append(rows[idx][subidx])
-
-    # print(fixed_indexes)
 
     return int(
         sum(
